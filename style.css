@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26352f;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px #00000012;
+}
+
+header h2 {
+    color: #087f6b;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #26352f;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #087f6b;
+}
+
+.hero {
+    min-height: 520px;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, #102c26dd, #102c2640),
+        url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #087f6b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #07594c;
+}
+
+.section {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: #153d34;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7771;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    text-align: left;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000012;
+    padding-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3,
+.card p {
+    margin: 10px 18px;
+}
+
+.card h3 {
+    color: #087f6b;
+}
+
+.card p {
+    color: #6b7771;
+}
+
+.packages {
+    background: #f3f7f3;
+}
+
+.package {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 20px #0000000a;
+}
+
+.package h3 {
+    color: #087f6b;
+    margin-bottom: 12px;
+}
+
+.package .btn {
+    margin-top: 12px;
+}
+
+.note {
+    color: #6b7771;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #d6dfd9;
+    border-radius: 6px;
+    background: white;
+    font: inherit;
+}
+
+form button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#message {
+    color: #087f6b;
+    margin-top: 15px;
+}
+
+footer {
+    background: #153d34;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+@media (max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 440px;
+        padding: 40px 6%;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+}
+/* Popular Destinations - 3 cards per row */
+#destinations .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: start;
+}
+
+#destinations .card {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+#destinations .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+#destinations .card h3,
+#destinations .card p {
+    margin: 10px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+    #destinations .cards {
+        grid-template-columns: 1fr;
+    }
+}
